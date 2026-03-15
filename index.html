@@ -7,11 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1b5e20; /* Deep Forest Green */
-            --accent: #fbc02d;  /* Academic Gold */
-            --bg-light: #f8faf8;
-            --text-main: #2c3e50;
-            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --primary: #1E3A8A; /* Navy Blue */
+            --accent: #FBBF24;  /* Gold */
+            --bg-light: #f4f7f9;
+            --text-main: #1a2a44;
+            --shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         * { box-sizing: border-box; scroll-behavior: smooth; }
@@ -24,46 +24,47 @@
             line-height: 1.7;
         }
 
-        /* Hero Header */
         header {
-            background: linear-gradient(135deg, var(--primary) 0%, #0d3b11 100%);
+            background-color: var(--primary);
             color: white;
-            padding: 60px 20px;
+            padding: 50px 20px;
             text-align: center;
-            border-bottom: 6px solid var(--accent);
+            border-bottom: 5px solid var(--accent);
         }
 
-        /* Logo Styling */
-        .logo-container {
-            margin-bottom: 20px;
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
         }
 
-        .logo-container img {
-            width: 120px;
+        .logo-img {
+            max-width: 250px;
             height: auto;
+        }
+
+        /* Profile Picture Styling */
+        .profile-img {
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             border: 3px solid var(--accent);
-            background: white;
-            padding: 5px;
-        }
-
-        header h1 {
-            font-size: 2.8rem;
-            margin: 0;
-            letter-spacing: -1px;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
         header p {
             font-weight: 300;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             opacity: 0.9;
-            margin-top: 10px;
+            margin: 10px 0 0 0;
+            letter-spacing: 1px;
         }
 
-        /* Sticky Navigation */
         nav {
             background: white;
-            padding: 20px;
+            padding: 15px;
             text-align: center;
             position: sticky;
             top: 0;
@@ -72,144 +73,109 @@
         }
 
         nav a {
-            color: var(--text-main);
-            margin: 0 20px;
+            color: var(--primary);
+            margin: 0 15px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
+            font-weight: 700;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: 0.3s;
         }
 
-        nav a:hover { color: var(--primary); }
-
-        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
 
         .card {
             background: white;
             padding: 40px;
-            border-radius: 20px;
+            border-radius: 12px;
             box-shadow: var(--shadow);
-            margin-bottom: 40px;
-            border: 1px solid rgba(0,0,0,0.03);
+            margin-bottom: 30px;
         }
 
         h2 {
-            font-size: 1.8rem;
             color: var(--primary);
+            border-left: 5px solid var(--accent);
+            padding-left: 15px;
             margin-top: 0;
-            display: flex;
-            align-items: center;
-        }
-
-        h2::after {
-            content: "";
-            flex: 1;
-            height: 1px;
-            background: #eee;
-            margin-left: 20px;
         }
 
         .subjects-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            gap: 20px;
         }
 
         .subject-box {
-            background: #fdfdfd;
-            padding: 25px;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary);
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
         }
 
         ul { list-style: none; padding: 0; }
-        li { margin-bottom: 10px; padding-left: 20px; position: relative; }
-        li::before { content: "•"; color: var(--accent); font-weight: bold; position: absolute; left: 0; }
+        li { margin-bottom: 8px; }
+        li::before { content: "✓"; color: var(--accent); font-weight: bold; margin-right: 10px; }
 
         input, textarea {
             width: 100%;
-            padding: 15px;
-            margin: 10px 0;
-            border: 1px solid #e0e0e0;
-            border-radius: 10px;
-            background: #fcfcfc;
-            font-family: inherit;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
         }
 
         button {
             background: var(--primary);
             color: white;
-            padding: 18px;
+            padding: 15px;
             border: none;
-            border-radius: 10px;
+            border-radius: 6px;
             font-weight: 700;
             cursor: pointer;
             width: 100%;
-            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: 0.2s;
         }
 
-        button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(27, 94, 32, 0.2);
-        }
+        button:hover { background: #162e70; transform: translateY(-2px); }
 
         .pricing-table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
-            background: #fcfcfc;
-            border-radius: 10px;
-            overflow: hidden;
         }
-        .pricing-table th, .pricing-table td {
-            padding: 15px;
-            text-align: center;
-            border: 1px solid #eee;
-        }
-        .pricing-table th { background: var(--primary); color: white; }
-        .pricing-table tr:nth-child(even) { background: #f1f8e9; }
+        .pricing-table th { background: var(--primary); color: white; padding: 12px; }
+        .pricing-table td { padding: 12px; border-bottom: 1px solid #e2e8f0; text-align: center; }
 
-        .payment-card {
+        .zelle-card {
             background: #6d1ed1;
             color: white;
-            padding: 30px;
-            border-radius: 15px;
+            padding: 20px;
+            border-radius: 10px;
             text-align: center;
             margin-top: 20px;
         }
 
-        .phone-display {
-            font-size: 1.8rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            display: block;
-            margin-top: 10px;
-        }
+        footer { text-align: center; padding: 40px; color: #64748b; font-size: 0.8rem; }
 
-        footer { text-align: center; padding: 60px 20px; color: #999; font-size: 0.8rem; }
-
-        @media (max-width: 768px) {
-            .subjects-grid { grid-template-columns: 1fr; }
-            header h1 { font-size: 2rem; }
-        }
+        @media (max-width: 600px) { .subjects-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo-container">
-        <img src="logo.png" alt="K-8 Excellence Tutoring Logo">
+    <div class="header-content">
+        <img src="https://lh3.googleusercontent.com/gg/AMW1TPpMrvo5O-MVyTXAJDF_T4i5Jrtrpk0CWsfcIuldHmLfGHJpUh9LtSa3cuDovTAQft_YQqDb-bjwSTFGi8uC1AfwMmxLaUDVyJAvbokv8rCV5kmSj_M6JQPAVTDQo8nSCxVt5LSmmONHkJwWoPVgoj6AqKMa0ZauNaY8kFGGnXTC6sNCO4xpKG-zyJ2-J6hOdkxIOdlzmUqwIQxdF6oej1x7qc5rNpTRa3R-v9HxEN2bVcALhG6KoepJ-mLyJ6O-YYDpv62qsdsTPIXtRlCU-Qpc3CjxGMR9aNY" alt="Joshua Liberman" class="profile-img">
+        
+        <img src="logo.png" alt="Joshua's Tutoring Logo" class="logo-img">
+        
+        <p>Honors Student | Yeshiva of Flatbush Sophomore</p>
     </div>
-    <h1>K-8 Excellence Tutoring</h1>
-    <p>Professional Online Support for Elementary & Middle School Students</p>
 </header>
 
 <nav>
-    <a href="#about">About Me</a>
+    <a href="#about">About</a>
     <a href="#subjects">Subjects</a>
-    <a href="#book">Book Now</a>
+    <a href="#book">Book</a>
     <a href="#pay">Payment</a>
 </nav>
 
@@ -218,95 +184,61 @@
     <section id="about" class="card">
         <h2>About Your Tutor</h2>
         <p>I am a <strong>Sophomore at Yeshiva of Flatbush</strong> and a dedicated <strong>Honors Student</strong>. I provide high-quality, one-on-one tutoring for students in grades K-8, focusing on building the academic discipline and confidence required for success.</p>
-        <p><strong>Online Convenience:</strong> All sessions are conducted via <strong>Zoom</strong>, utilizing interactive digital tools to ensure engagement and clarity from the comfort of your home.</p>
+        <p><strong>Online Excellence:</strong> All sessions are conducted via <strong>Zoom</strong>, utilizing interactive digital tools to ensure engagement and clarity from the comfort of your home.</p>
     </section>
 
     <section id="subjects" class="card">
-        <h2>What I Tutor</h2>
+        <h2>Expertise</h2>
         <div class="subjects-grid">
             <div class="subject-box">
-                <h3 style="margin-top:0">Elementary (K-5)</h3>
+                <h3>Elementary (K-5)</h3>
                 <ul>
-                    <li>Reading Fluency & Phonics</li>
-                    <li>Foundational Mathematics</li>
+                    <li>Reading Fluency</li>
+                    <li>Foundational Math</li>
                     <li>Social Studies & Science</li>
                 </ul>
             </div>
             <div class="subject-box">
-                <h3 style="margin-top:0">Middle School (6-8)</h3>
+                <h3>Middle School (6-8)</h3>
                 <ul>
                     <li>Pre-Algebra & Algebra I</li>
                     <li>Geometry</li>
-                    <li>Analytical Writing & Grammar</li>
-                    <li>Social Studies & History</li>
+                    <li>Analytical Writing</li>
+                    <li>Social Studies</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <section id="book" class="card">
-        <h2>Book Your First Session</h2>
-        <p>Complete the registration form below to schedule your introductory session.</p>
-        
+        <h2>Schedule a Session</h2>
         <form action="https://formspree.io/f/xzdjadgo" method="POST">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                <input type="text" name="parent_name" placeholder="Parent/Guardian Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
-            </div>
-            <input type="text" name="student_grade" placeholder="Student Grade Level" required>
-            <textarea name="needs" rows="4" placeholder="Please describe your child's current challenges and any specific goals or upcoming tests you'd like us to cover..."></textarea>
-            <button type="submit">Send Request</button>
+            <input type="text" name="name" placeholder="Parent Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="text" name="grade" placeholder="Student Grade">
+            <textarea name="message" rows="4" placeholder="How can I help your child succeed?"></textarea>
+            <button type="submit">Submit Inquiry</button>
         </form>
-        <div style="text-align: center; margin-top: 20px; font-size: 0.85rem; color: #666;">
-            Direct Correspondence: <strong>joshua060310@gmail.com</strong> | 917-715-4960
-        </div>
     </section>
 
     <section id="pay" class="card">
-        <h2>Simple Payments</h2>
-        <div style="text-align: center;">
-            <p style="font-size: 1.1rem;">Standard Single Session: <strong>$30 / Hour</strong></p>
-            
-            <table class="pricing-table">
-                <thead>
-                    <tr>
-                        <th>Package Type</th>
-                        <th>Sessions</th>
-                        <th>Total Cost</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Single Session</td>
-                        <td>1 Hour</td>
-                        <td>$30</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Monthly Progress</strong></td>
-                        <td>4 Hours</td>
-                        <td><strong>$110</strong> (Save $10)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Semester Success</strong></td>
-                        <td>10 Hours</td>
-                        <td><strong>$270</strong> (Save $30)</td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <p style="color: #666; font-size: 0.9rem; margin-top: 15px;">Please send payment only after your session time is confirmed.</p>
-        </div>
+        <h2>Pricing & Payment</h2>
+        <table class="pricing-table">
+            <tr><th>Package</th><th>Sessions</th><th>Price</th></tr>
+            <tr><td>Single Session</td><td>1 Hour</td><td>$30</td></tr>
+            <tr><td>Monthly Progress</td><td>4 Hours</td><td>$110</td></tr>
+            <tr><td>Semester Success</td><td>10 Hours</td><td>$270</td></tr>
+        </table>
         
-        <div class="payment-card">
-            <span style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;">Secure Payment via Zelle</span>
-            <span class="phone-display">917-715-4960</span>
+        <div class="zelle-card">
+            <strong>Zelle Payment: 917-715-4960</strong>
         </div>
     </section>
 
 </div>
 
 <footer>
-    <p>&copy; 2026 K-8 Excellence Tutoring | Joshua Liberman, Yeshiva of Flatbush Sophomore.</p>
+    &copy; 2026 K-8 Excellence Tutoring by Joshua Liberman
 </footer>
 
 </body>
