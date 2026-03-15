@@ -1,79 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K-8 Excellence Tutoring | Joshua Liberman</title>
+    <title>K-8 Excellence Tutoring</title>
     <style>
-        :root { --primary: #2e7d32; --secondary: #fbc02d; --dark: #1b5e20; --venmo: #3d95ce; --stripe: #635bff; --zelle: #6d1ed1; --paypal: #0070ba; --zoom: #2D8CFF; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: #f4f7f4; color: #333; line-height: 1.6; scroll-behavior: smooth; }
+        :root { --primary: #2e7d32; --secondary: #fbc02d; --dark: #1b5e20; --venmo: #3d95ce; --stripe: #635bff; --zelle: #6d1ed1; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: #f4f7f4; color: #333; line-height: 1.6; }
         
         header { background: var(--primary); color: white; text-align: center; padding: 3rem 1rem; border-bottom: 5px solid var(--secondary); }
         nav { background: var(--dark); padding: 15px; text-align: center; position: sticky; top: 0; z-index: 100; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
         
         .container { max-width: 900px; margin: 20px auto; padding: 20px; }
         .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 30px; }
         
         h2 { color: var(--primary); border-bottom: 2px solid var(--secondary); padding-bottom: 5px; }
-        .zoom-badge { background: var(--zoom); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; display: inline-block; margin-bottom: 10px; font-weight: bold; }
-        
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         
-        /* Availability Table */
-        .schedule-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        .schedule-table td { padding: 10px; border-bottom: 1px solid #eee; }
-        .day-name { font-weight: bold; color: var(--dark); width: 40%; }
-        
         input, textarea, button { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; font-size: 1rem; }
-        button { color: white; font-weight: bold; border: none; cursor: pointer; transition: 0.3s; }
-        button:hover { opacity: 0.9; transform: translateY(-2px); }
-        .submit-btn { background: var(--primary); }
+        button { background: var(--primary); color: white; font-weight: bold; border: none; cursor: pointer; transition: 0.3s; }
+        button:hover { background: var(--dark); transform: translateY(-2px); }
         
         .pay-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
         .pay-card { border: 2px solid #eee; padding: 15px; border-radius: 10px; text-align: center; }
         .stripe-btn { background: var(--stripe); }
         .venmo-btn { background: var(--venmo); }
-        .paypal-btn { background: var(--paypal); }
         .zelle-box { background: var(--zelle); color: white; padding: 10px; border-radius: 8px; font-weight: bold; margin-top: 10px; }
 
         footer { text-align: center; padding: 40px; color: #777; font-size: 0.9rem; }
-        @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } nav a { display: block; margin: 10px 0; } }
-    </style>
-</head>
-<body>
-
-<header>
+        @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+    </style></head><body><header>
     <h1>K-8 Excellence Tutoring</h1>
-    <div class="zoom-badge">100% Online via Zoom</div>
-    <p>Professional Support for Elementary & Middle School Students</p>
-</header>
-
-<nav>
+    <p>Professional Support for Elementary & Middle School Students</p></header><nav>
     <a href="#about">About Me</a>
     <a href="#subjects">Subjects</a>
-    <a href="#schedule">Availability</a>
-    <a href="#book">Book Now</a>
-    <a href="#pay">Payment</a>
-</nav>
-
-<div class="container">
+    <a href="#book">Book a Session</a>
+    <a href="#pay">Payment</a></nav><div class="container">
     
     <section id="about" class="card">
-        <h2>About Me</h2>
-        <p>Hi, I'm <strong>Joshua Liberman</strong>. I am a dedicated NYC-based tutor helping K-8 students reach their full potential through convenient <strong>online Zoom sessions</strong>.</p>
-        <p>I specialize in making difficult concepts easy to understand, providing a patient and encouraging environment where students can thrive from the comfort of their own homes.</p>
-    </section>
-
-    <section id="schedule" class="card">
-        <h2>Tutoring Hours (EST)</h2>
-        <p>I am available for Zoom sessions during the following times:</p>
-        <table class="schedule-table">
-            <tr><td class="day-name">Mon & Tue</td><td>6:00 PM – 9:00 PM</td></tr>
-            <tr><td class="day-name">Wed & Thu</td><td>6:30 PM – 9:00 PM</td></tr>
-            <tr><td class="day-name">Friday</td><td>2:30 PM – 9:00 PM</td></tr>
-            <tr><td class="day-name">Sat & Sun</td><td>9:00 AM – 9:00 PM</td></tr>
-        </table>
+        <h2>About Your Tutor</h2>
+        <p>I provide high-quality, one-on-one tutoring for students in grades K-8. My goal is to build confidence, improve grades, and help students master the fundamentals of their schoolwork.</p>
+        <p><strong>Chess Background:</strong> I have been playing chess for almost a decade and have competed at the highest levels, including <strong>States, Nationals, and Grade Nationals</strong>. I love sharing the strategy and discipline of the game with my students.</p>
     </section>
 
     <section id="subjects" class="card">
@@ -85,6 +51,7 @@
                     <li>Reading & Phonics</li>
                     <li>Basic Math (Addition - Fractions)</li>
                     <li>Social Studies & Science</li>
+                    <li>Homework Help</li>
                 </ul>
             </div>
             <div>
@@ -92,34 +59,35 @@
                 <ul>
                     <li>Pre-Algebra & Algebra 1</li>
                     <li>Essay Writing & Grammar</li>
-                    <li>Study Skills & Organization</li>
+                    <li>Earth Science & Biology</li>
+                    <li>Chess (Strategy & Competitive Skills)</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <section id="book" class="card">
-        <h2>Book a Zoom Session</h2>
-        <p>Request a time that fits within my schedule. I will email you the <strong>Zoom meeting link</strong> once we confirm.</p>
+        <h2>Book Your First Session</h2>
+        <p>Fill out the form below. Once you hit send, I'll be notified via Formspree and will email you back!</p>
         
         <form action="https://formspree.io/f/xzdjadgo" method="POST">
-            <input type="text" name="parent_name" placeholder="Parent Name" required>
+            <input type="text" name="parent_name" placeholder="Parent/Guardian Name" required>
             <input type="email" name="email" placeholder="Email Address" required>
             <input type="text" name="student_grade" placeholder="Student Grade Level" required>
-            <textarea name="needs" rows="4" placeholder="Desired day/time and subjects..."></textarea>
-            <button type="submit" class="submit-btn">Send Booking Request</button>
+            <textarea name="needs" rows="4" placeholder="What subjects or chess skills do you need help with?"></textarea>
+            <button type="submit">Send Request</button>
         </form>
     </section>
 
     <section id="pay" class="card" style="text-align: center;">
         <h2>Simple Payments</h2>
-        <p>Rate: <strong>$30 / hour</strong></p>
+        <p>Current Rate: <strong>$30 / hour</strong></p>
         
         <div class="pay-grid">
             <div class="pay-card">
-                <strong>PayPal</strong>
-                <button class="paypal-btn" onclick="window.location.href='https://paypal.me/JoshuaLiberman2010'">Pay via PayPal</button>
-                <small>Secure via PayPal.Me</small>
+                <strong>Credit / Debit</strong>
+                <button class="stripe-btn" onclick="window.location.href='https://buy.stripe.com/YOUR_STRIPE_LINK'">Pay with Card</button>
+                <small>Secure via Stripe</small>
             </div>
 
             <div class="pay-card">
@@ -129,26 +97,13 @@
             </div>
         </div>
 
-        <div class="pay-grid">
-            <div class="pay-card">
-                <strong>Credit / Debit</strong>
-                <button class="stripe-btn" onclick="window.location.href='https://buy.stripe.com/YOUR_STRIPE_LINK'">Pay with Card</button>
-                <small>Secure via Stripe</small>
+        <div class="pay-card" style="margin-top: 15px;">
+            <strong>Zelle</strong>
+            <p style="margin: 5px 0;">Send payment via bank app to:</p>
+            <div class="zelle-box">
+                917-575-8748
             </div>
-
-            <div class="pay-card">
-                <strong>Zelle</strong>
-                <div class="zelle-box">917-575-8748</div>
-                <small>No fees via Bank App</small>
-            </div>
+            <small>(No fees for parents or tutors)</small>
         </div>
-    </section>
-
-</div>
-
-<footer>
-    <p>&copy; 2026 K-8 Excellence Tutoring. NYC-Based Online Learning.</p>
-</footer>
-
-</body>
-</html>
+    </section></div><footer>
+    <p>&copy; 2026 K-8 Excellence Tutoring. Based in NYC.</p></footer></body></html>
