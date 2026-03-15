@@ -20,6 +20,10 @@
         button { background: var(--primary); color: white; font-weight: bold; border: none; cursor: pointer; transition: 0.3s; }
         button:hover { background: var(--dark); transform: translateY(-2px); }
         
+        .checklist { list-style: none; padding: 0; }
+        .checklist li { background: #f1f8e9; margin: 10px 0; padding: 15px; border-radius: 8px; display: flex; align-items: center; }
+        .checklist li::before { content: "✅"; margin-right: 15px; }
+
         .promo-box { background: #fffde7; border-left: 5px solid var(--secondary); padding: 15px; margin-top: 10px; border-radius: 5px; }
         .zelle-container { background: #f9f9f9; border: 2px dashed var(--zelle); padding: 25px; border-radius: 12px; text-align: center; margin-top: 20px; }
         .zelle-box { background: var(--zelle); color: white; padding: 15px; border-radius: 8px; font-weight: bold; font-size: 1.4rem; display: inline-block; margin-top: 10px; }
@@ -31,7 +35,8 @@
     <p>Professional Support for Elementary & Middle School Students</p></header><nav>
     <a href="#about">About Me</a>
     <a href="#subjects">Subjects</a>
-    <a href="#book">Book a Session</a>
+    <a href="#tips">Success Tips</a>
+    <a href="#book">Book Now</a>
     <a href="#pay">Payment</a></nav><div class="container">
     
     <section id="about" class="card">
@@ -64,6 +69,17 @@
         </div>
     </section>
 
+    <section id="tips" class="card">
+        <h2>Prep for Success</h2>
+        <p>To get the most out of every 60-minute session, please ensure the student is ready with the following:</p>
+        <ul class="checklist">
+            <li><strong>The Essentials:</strong> Relevant textbooks, workbooks, and a notebook with pencils/pens.</li>
+            <li><strong>Current Assignments:</strong> Any specific homework or test-prep materials you'd like to focus on.</li>
+            <li><strong>Workspace:</strong> A quiet, well-lit area with minimal distractions.</li>
+            <li><strong>Chess Students:</strong> A physical chess board is great, but not required if we are using digital tools!</li>
+        </ul>
+    </section>
+
     <section id="book" class="card">
         <h2>Book Your First Session</h2>
         <p>Fill out the form below. Once you hit send, I'll be notified and will email you back!</p>
@@ -72,7 +88,7 @@
             <input type="text" name="parent_name" placeholder="Parent/Guardian Name" required>
             <input type="email" name="email" placeholder="Email Address" required>
             <input type="text" name="student_grade" placeholder="Student Grade Level" required>
-            <textarea name="needs" rows="4" placeholder="What subjects or chess skills do you need help with?"></textarea>
+            <textarea name="needs" rows="4" placeholder="Please describe your child's current challenges and any specific goals or upcoming tests you'd like us to cover!"></textarea>
             <button type="submit">Send Request</button>
         </form>
     </section>
@@ -81,9 +97,6 @@
         <h2>Special Offers</h2>
         <div class="promo-box">
             <strong>Referral Program:</strong> Refer a new student and get <strong>$10 off</strong> your next session once they book their first hour!
-        </div>
-        <div class="promo-box" style="margin-top: 15px;">
-            <strong>Sibling Discount:</strong> Need tutoring for two? Ask me about special rates for back-to-back or group sessions.
         </div>
     </section>
 
