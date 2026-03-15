@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K-8 Excellence Tutoring</title>
     <style>
-        :root { --primary: #2e7d32; --secondary: #fbc02d; --dark: #1b5e20; --venmo: #3d95ce; --stripe: #635bff; --zelle: #6d1ed1; }
+        :root { --primary: #2e7d32; --secondary: #fbc02d; --dark: #1b5e20; --zelle: #6d1ed1; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: #f4f7f4; color: #333; line-height: 1.6; }
         
         header { background: var(--primary); color: white; text-align: center; padding: 3rem 1rem; border-bottom: 5px solid var(--secondary); }
@@ -20,11 +20,8 @@
         button { background: var(--primary); color: white; font-weight: bold; border: none; cursor: pointer; transition: 0.3s; }
         button:hover { background: var(--dark); transform: translateY(-2px); }
         
-        .pay-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
-        .pay-card { border: 2px solid #eee; padding: 15px; border-radius: 10px; text-align: center; }
-        .stripe-btn { background: var(--stripe); }
-        .venmo-btn { background: var(--venmo); }
-        .zelle-box { background: var(--zelle); color: white; padding: 10px; border-radius: 8px; font-weight: bold; margin-top: 10px; }
+        .zelle-container { background: #f9f9f9; border: 2px dashed var(--zelle); padding: 25px; border-radius: 12px; text-align: center; margin-top: 20px; }
+        .zelle-box { background: var(--zelle); color: white; padding: 15px; border-radius: 8px; font-weight: bold; font-size: 1.4rem; display: inline-block; margin-top: 10px; }
 
         footer { text-align: center; padding: 40px; color: #777; font-size: 0.9rem; }
         @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
@@ -68,7 +65,7 @@
 
     <section id="book" class="card">
         <h2>Book Your First Session</h2>
-        <p>Fill out the form below. Once you hit send, I'll be notified via Formspree and will email you back!</p>
+        <p>Fill out the form below. Once you hit send, I'll be notified and will email you back!</p>
         
         <form action="https://formspree.io/f/xzdjadgo" method="POST">
             <input type="text" name="parent_name" placeholder="Parent/Guardian Name" required>
@@ -82,28 +79,15 @@
     <section id="pay" class="card" style="text-align: center;">
         <h2>Simple Payments</h2>
         <p>Current Rate: <strong>$30 / hour</strong></p>
+        <p style="color: #666; font-size: 0.9rem;">Please send payment only after your session time is confirmed.</p>
         
-        <div class="pay-grid">
-            <div class="pay-card">
-                <strong>Credit / Debit</strong>
-                <button class="stripe-btn" onclick="window.location.href='https://buy.stripe.com/YOUR_STRIPE_LINK'">Pay with Card</button>
-                <small>Secure via Stripe</small>
-            </div>
-
-            <div class="pay-card">
-                <strong>Venmo</strong>
-                <button class="venmo-btn" onclick="window.location.href='https://venmo.com/u/YOUR_PARENT_VENMO'">Pay via Venmo</button>
-                <small>@YOUR_PARENT_VENMO</small>
-            </div>
-        </div>
-
-        <div class="pay-card" style="margin-top: 15px;">
-            <strong>Zelle</strong>
-            <p style="margin: 5px 0;">Send payment via bank app to:</p>
+        <div class="zelle-container">
+            <strong style="color: var(--zelle); font-size: 1.2rem;">Zelle Information</strong>
+            <p style="margin: 10px 0;">Send payment via your bank's app to:</p>
             <div class="zelle-box">
                 917-575-8748
             </div>
-            <small>(No fees for parents or tutors)</small>
+            <p style="font-size: 0.8rem; margin-top: 15px; color: #777;">(Zelle is preferred as it has zero transaction fees for parents or tutors.)</p>
         </div>
     </section></div><footer>
     <p>&copy; 2026 K-8 Excellence Tutoring. Based in NYC.</p></footer></body></html>
